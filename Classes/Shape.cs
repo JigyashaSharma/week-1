@@ -3,12 +3,12 @@ namespace Week1ObjectOriented.Classes
 {
     public abstract class Shape
     {
-        private int area;
+        private double area;
 
-        public abstract int GetArea();
+        public abstract double GetArea();
        
 
-        public void SetArea(int Area)
+        public void SetArea(double Area)
         {
             area = Area;
         }

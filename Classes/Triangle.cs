@@ -9,11 +9,10 @@ namespace Week1ObjectOriented.Classes
 {
     public class Triangle : Shape, IFaces
     {
-        public override int GetArea()
+        public override double GetArea()
         {
             throw new NotImplementedException();
         }
-
         public int GetFaces()
         {
             throw new NotImplementedException();

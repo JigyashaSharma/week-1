@@ -25,7 +25,7 @@ namespace Week1ObjectOriented.Classes
             side = s;
         }
 
-        public override int GetArea()
+        public override double GetArea()
         {
             return side * side; 
         }
