@@ -51,6 +51,31 @@ Console.WriteLine("\n\nTask 3: Demo\n");
 IShape squareInterface = square;
 Console.WriteLine("Area using Interface IShape GetArea() : " + squareInterface.GetArea());
 
+//4. Extend the console application to generate an array of shapes that all have colours
+Console.WriteLine("\n\nTask 4: Demo\n");
+
+Shape[] shapeArray = { new Square(8), new Circle(3), new Triangle() };
+Console.WriteLine("Created a shape array with square, circle, triangle");
+
+foreach (Shape shape in shapeArray)
+{
+    ShapeColourHelper.RandomColour(shape);
+}
+foreach (Shape shape in shapeArray)
+{
+    if (shape.GetType() == typeof(Circle))
+    {
+        Console.WriteLine("Color of circle is : " + shape.Colour);
+    }
+    else if (shape.GetType() == typeof(Triangle))
+    {
+        Console.WriteLine("Color of Triangle is : " + shape.Colour);
+    }
+    else if (shape.GetType() == typeof(Square))
+    {
+        Console.WriteLine("Color of Square is : " + shape.Colour);
+    }
+}
 Console.ReadLine();
 
 
