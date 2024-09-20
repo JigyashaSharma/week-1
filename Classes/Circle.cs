@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Week1ObjectOriented.Interfaces;
 
 namespace Week1ObjectOriented.Classes
 {
-    public class Circle : Shape
+    public class Circle : Shape, IShape
     {
         //1.Creating radius property
         public double Radius { get; set; }
@@ -26,6 +27,11 @@ namespace Week1ObjectOriented.Classes
             return Math.PI * Radius * Radius;
         }
 
+        //3.Implementing IShape GetArea()
+        double IShape.GetArea()
+        {
+            return Math.PI * Radius * Radius;
+        }
     }
 
 }
