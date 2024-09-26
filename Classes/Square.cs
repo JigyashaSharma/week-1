@@ -3,7 +3,7 @@ using Week1ObjectOriented.Interfaces;
 
 namespace Week1ObjectOriented.Classes
 {
-    public class Square : Shape, IFaces
+    public class Square : Shape, IFaces, IShape
     {
         private int side;
 
@@ -25,7 +25,7 @@ namespace Week1ObjectOriented.Classes
             side = s;
         }
 
-        public override int GetArea()
+        public override double GetArea()
         {
             return side * side; 
         }
@@ -35,6 +35,12 @@ namespace Week1ObjectOriented.Classes
             throw new NotImplementedException();
         }
 
+        //3. Implement IShape GetArea() if not implemented Shape class GetArea is considered
+        double IShape.GetArea()
+        {
+            Console.WriteLine("Interface GetArea() called");
+            return side * side;
+        }
         public readonly int Sides;
 
     }
